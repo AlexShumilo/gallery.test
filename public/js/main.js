@@ -18,16 +18,20 @@ $(document).ready(function () {
             url: url,
             data: data,
             success: function (result) {
+            	var errors = $('#filter-form .alert.alert-danger');
+                errors.hide();
                 var elements = $(result).find('#gallery').html();
                 $('#gallery').html(elements);
+
             },
             error: function(data){
                 var errors = JSON.parse(data.response).errors;
-                var $errors = $('#filter-form .alert.alert-danger');
+                var $errors = $('#filter-form .alert.alert-danger p');
+                $errors.empty();
                 for (var prop in errors) {
-                    $errors.append('<p>' + errors[prop].toString()+ '</p>');
+                    $errors.append(errors[prop].toString());
                 }
-                $errors.show();
+                $('#filter-form .alert.alert-danger').show();
             }
         });
     });

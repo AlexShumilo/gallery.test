@@ -38,7 +38,7 @@
         <h2>Фильтр</h2>
         <form id="filter-form" method="post" action="{{ route('gallery') }}">
             {{ csrf_field() }}
-                <div style="display: none" class="alert alert-danger"></div>
+                <div style="display: none" class="alert alert-danger filter-alert"><p></p></div>
             <input type="hidden" name="hidden" value="1">
             <div class="form-row">
                 <div class="form-group col-md-6">
