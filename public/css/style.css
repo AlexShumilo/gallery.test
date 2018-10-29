@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+.file-container {
+    background: rgba(161, 196, 202, 0.42);
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+.file-btn {
+    margin: 10px 0;
+}
+.gallery-inner {
+    margin: 25px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.gallery-img {
+    width: 100px;
+    height: 70px;
+    margin: 5px;
+}
+.footer {
+    background: rgba(161, 196, 202, 0.42);
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+#count-form {
+    width: 250px;
+}
+
